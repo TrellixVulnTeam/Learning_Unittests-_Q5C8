@@ -23,4 +23,5 @@ class MethodsTestCase(unittest.TestCase):
 
     def test_some_clubs_in_registered_list(self):
         club_registered_list = Club.clubs_registered
-        self.assertEqual(', '.join(club_registered_list), 'Arsenal, Chelsea, Liverpool')
+        self.assertEqual(', '.join(club_registered_list), 'Arsenal, Chelsea, Liverpool, Manchester United,'
+                                                          ' Manchester City, Tottenham')

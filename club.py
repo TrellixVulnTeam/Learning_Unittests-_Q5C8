@@ -15,4 +15,9 @@ class Club:
 arsenal = Club('Arsenal', 1886, 'Red and white')
 chelsea = Club('Chelsea', 1905, 'Blue')
 liverpool = Club('Liverpool', 1892, 'Red')
+man_united = Club('Manchester United', 1878, 'Red')
+man_city = Club('Manchester City', 1880, 'White and blue')
+spurs = Club('Tottenham', 1882, 'White')
 
+if __name__ == '__main__':
+    print(', '.join(Club.clubs_registered))
