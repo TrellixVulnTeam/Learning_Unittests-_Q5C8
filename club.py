@@ -12,8 +12,7 @@ class Club:
         return f'{self.name} was found at {self.year}. They colors - {self.colors}'
 
 
-if __name__ == '__main__':
-    arsenal = Club('Arsenal', 1886, 'Red and white')
-    chelsea = Club('Chelsea', 1905, 'Blue')
-    liverpool = Club('Liverpool', 1892, 'Red')
-    print(', '.join(Club.clubs_registered))
+arsenal = Club('Arsenal', 1886, 'Red and white')
+chelsea = Club('Chelsea', 1905, 'Blue')
+liverpool = Club('Liverpool', 1892, 'Red')
+

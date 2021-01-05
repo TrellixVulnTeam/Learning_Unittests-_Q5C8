@@ -20,7 +20,7 @@ class MethodsTestCase(unittest.TestCase):
 
     def test_transfer(self):
         alexandre_lacazette = Player('Alexandre', 'Lacazette', 'Arsenal', 29, 'ST', 'France')
-        alexandre_lacazette.transfer('PSG')
-        self.assertEqual(alexandre_lacazette.team, 'PSG')
+        alexandre_lacazette.transfer('Liverpool')
+        self.assertEqual(alexandre_lacazette.team, 'Liverpool')
         self.assertIsInstance(alexandre_lacazette.team, str)
 
