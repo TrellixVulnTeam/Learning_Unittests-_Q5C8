@@ -18,4 +18,9 @@ class MethodsTestCase(unittest.TestCase):
         self.assertIsInstance(player_obj.position, str)
         self.assertIsInstance(player_obj.country, str)
 
+    def test_transfer(self):
+        alexandre_lacazette = Player('Alexandre', 'Lacazette', 'Arsenal', 29, 'ST', 'France')
+        alexandre_lacazette.transfer('PSG')
+        self.assertEqual(alexandre_lacazette.team, 'PSG')
+        self.assertIsInstance(alexandre_lacazette.team, str)
 
