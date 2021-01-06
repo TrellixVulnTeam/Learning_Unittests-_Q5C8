@@ -41,9 +41,9 @@ class TestMatch(unittest.TestCase):
         with self.assertRaises(ValueError):
             match.simulate_match(2.5, 3.7)
 
-    def test_simulate_match_argument_type_boolean(self):
+    def test_simulate_match_argument_type_none(self):
         with self.assertRaises(ValueError):
-            match.simulate_match(True, False)
+            match.simulate_match(None, None)
 
     def test_simulate_match_argument_types(self):
         with self.assertRaises(ValueError):
