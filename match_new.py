@@ -14,9 +14,23 @@ class Match:
         self.ats = ats
 
     def return_match_result(self):
-        pass
+        if not isinstance(self.home_team, str) and not isinstance(self.away_team, str):
+            raise ValueError('Home team and Away team should be str type')
+        if not isinstance(self.fans, int) and not isinstance(self.hts, int) and not isinstance(self.ats, int):
+            raise ValueError('Arguments fans, hts, ats should be int type')
+        match_result = f'\n⚽ Match between {self.home_team} and {self.away_team} starts\n' \
+                       f'For today\'s match will come - {self.fans} fans.' \
+                       f'\n{self.home_team} {self.hts} : {self.ats} {self.away_team}'
+        matches_table.add_row([self.home_team, self.away_team, f'{self.hts} : {self.ats}', self.fans])
+        return match_result
 
 
 if __name__ == '__main__':
-    pass
+    first_match = Match('Arsenal', 'Liverpool', 23000, random.randint(0, 4), random.randint(0, 4))
+    second_match = Match('Chelsea', 'Manchester United', 31000, random.randint(0, 4), random.randint(0, 4))
+    third_match = Match('Manchester City', 'Tottenham', 27000, random.randint(0, 4), random.randint(0, 4))
+    first_match.return_match_result()
+    second_match.return_match_result()
+    third_match.return_match_result()
+    print('\n', matches_table)
 
