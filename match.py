@@ -19,7 +19,7 @@ def start_match(home_team, away_team):
     return f'Match between {home_team} and {away_team} starts'
 
 
-def simulate_match(home_scored_goals=random.randint(0, 4), away_scored_goals=random.randint(0, 4)):
+def simulate_match(home_scored_goals, away_scored_goals):
     if not isinstance(home_scored_goals, int) and not isinstance(away_scored_goals, int):
         raise ValueError('Goals value must be int')
     if home_scored_goals > away_scored_goals:
@@ -35,4 +35,16 @@ def append_match_result_to_table():
 
 
 if __name__ == '__main__':
-    pass
+    print(set_up_fans(6800))
+    print(start_match('Arsenal', 'Spurs'))
+    print(simulate_match(random.randint(0, 4), random.randint(0, 4)))
+    print()
+
+    print(set_up_fans(7500))
+    print(start_match('Chelsea', 'Liverpool'))
+    print(simulate_match(random.randint(0, 4), random.randint(0, 4)))
+    print()
+
+    print(set_up_fans(7700))
+    print(start_match('Manchester United', 'Manchester City'))
+    print(simulate_match(random.randint(0, 4), random.randint(0, 4)))
