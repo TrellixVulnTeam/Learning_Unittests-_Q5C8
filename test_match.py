@@ -14,7 +14,11 @@ class TestMatch(unittest.TestCase):
             match.set_up_fans('3444')
 
     def test_start_match(self):
-        pass
+        self.assertEqual(match.start_match('Arsenal', 'Tottenham'), 'Match between Arsenal and Tottenham starts')
+
+    def test_start_match_argument_types(self):
+        with self.assertRaises(ValueError):
+            match.start_match(1213, 5123)
 
     def test_simulate_match(self):
         pass
