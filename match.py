@@ -48,3 +48,9 @@ if __name__ == '__main__':
     print(set_up_fans(7700))
     print(start_match('Manchester United', 'Manchester City'))
     print(simulate_match(random.randint(0, 4), random.randint(0, 4)))
+    print()
+
+    print(set_up_fans(12000))
+    print(start_match(club.man_city.name, club.chelsea.name))
+    print(simulate_match(random.randint(0, 4), random.randint(0, 4)))
+    print()
