@@ -1,9 +1,14 @@
 import random
+import club
 from prettytable import PrettyTable
 from db_config import connection, cursor
 
 matches_table = PrettyTable()
 matches_table.field_names = ['Home team', 'Away team', 'Result', 'Fans']
+
+
+def schedule():
+    print(club.Club.clubs_registered)
 
 
 class Match:
@@ -35,12 +40,16 @@ class Match:
 
 
 if __name__ == '__main__':
-    first_match = Match('Arsenal', 'Liverpool', 23000, random.randint(0, 4), random.randint(0, 4))
-    second_match = Match('Chelsea', 'Manchester United', 31000, random.randint(0, 4), random.randint(0, 4))
-    third_match = Match('Manchester City', 'Tottenham', 27000, random.randint(0, 4), random.randint(0, 4))
-    first_match.return_match_result()
-    second_match.return_match_result()
-    third_match.return_match_result()
-    first_match.insert_match_result()
+    first_match = Match(club.arsenal.name, club.spurs.name, 43000, random.randint(0, 4), random.randint(0, 4))
+    second_match = Match(club.arsenal.name, club.liverpool.name, 32150, random.randint(0, 4), random.randint(0, 4))
+    third_match = Match(club.arsenal.name, club.man_united.name, 25025, random.randint(0, 4), random.randint(0, 4))
+    fourth_match = Match(club.arsenal.name, club.man_city.name, 42100, random.randint(0, 4), random.randint(0, 4))
+    fifth_match = Match(club.arsenal.name, club.chelsea.name, 31000, random.randint(0, 4), random.randint(0, 4))
+    last_match = Match(club.chelsea.name, club.arsenal.name, 37000, random.randint(0, 4), random.randint(0, 4))
+
+    matches_list = [first_match, second_match, third_match, fourth_match, fifth_match, last_match]
+    for match in matches_list:
+        match.return_match_result()
+
     print('\n', matches_table)
 
